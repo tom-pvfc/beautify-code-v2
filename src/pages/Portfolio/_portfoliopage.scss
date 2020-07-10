@@ -1,0 +1,94 @@
+/*************************/
+/////// GENERAL VARS //////
+/*************************/
+
+//TODO vars
+
+/*************************/
+/////// CUSTOM VARS ///////
+/*************************/
+
+//TODO vars
+
+/*************************/
+///// TYPOGRAPHY VARS /////
+/*************************/
+
+//TODO vars
+
+/*************************/
+///// COMPONENT CODE //////
+/*************************/
+.portfolio-page {
+    background-color: $color-2;
+    flex: 1;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 75%;
+        margin: 0 auto;
+        &--title {
+            margin-bottom: $margin-2;
+            letter-spacing: 3px;
+            line-height: 38px;
+            font-family: $font-1;
+            color: $color-1;
+            font-size: nth($h1-font-sizes, 1);
+        }
+        &--subtitle {
+            color: grey !important;
+        }
+    }
+}
+
+@include SmallDevice {
+    .portfolio-page {
+    }
+}
+
+@include MediumDevice {
+    .portfolio-page {
+        &__wrapper {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 750px;
+            &--title {
+                font-size: 64px;
+                line-height: 75px;
+                margin-bottom: $margin-4;
+            }
+            &--data {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@include LargeDevice {
+    .portfolio-page {
+        &__wrapper {
+            // width: 90% !important;
+            max-width: 1150px;
+            &--data{
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+@include OnEmbedDevice() {
+    .portfolio-page {
+    }
+}
+
+/*************************/
+/////// CUSTOM CODE ///////
+/*************************/
+//TODO code

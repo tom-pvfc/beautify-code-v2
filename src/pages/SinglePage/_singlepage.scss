@@ -1,0 +1,45 @@
+.single-page {
+    height: 100%;
+
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+
+    &__section{
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+    }
+
+    &__header{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        background-color: $color-1;
+    }
+
+    &__content{
+        margin-top: 0;
+        background-color: $color-1;
+    }
+
+    .teal-highlight{
+        color: $color-3;
+    }
+}
+
+@include SmallDevice {
+    .single-page {
+    }
+}
+
+@include MediumDevice {
+    .single-page {
+    }
+}
+
+@include OnEmbedDevice() {
+    .single-page {
+    }
+}

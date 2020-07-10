@@ -1,0 +1,56 @@
+.main-header{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    &__light{
+        color: $color-1;
+    }
+    &__dark{
+        color: $color-2;
+    }
+
+    &__focus{
+        text-align: left;
+        &--title{
+            margin-bottom: $margin-1;
+            font-size: 40px;
+
+        }
+        &--subtitle{
+            color: $color-3;
+        }
+        margin-bottom: $margin-2;
+    }
+
+    &__info{
+        text-align: left;
+        &--copy{
+            color: grey;
+        }
+        margin-bottom: $margin-2;
+    }
+}
+
+@include MediumDevice{
+    .main-header{
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+        &__focus{
+            flex:1;
+            
+            &--title{
+                margin-bottom: $margin-1;
+            }
+            &--subtitle{
+    
+            }
+        }
+    
+        &__info{
+            flex:2;
+            &--copy{
+    
+            }
+        }
+    }
+}

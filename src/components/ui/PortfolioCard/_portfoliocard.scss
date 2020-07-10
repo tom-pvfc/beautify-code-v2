@@ -1,0 +1,95 @@
+.portfolio-card{  
+    // margin: $margin-2 auto;
+    margin-bottom: $margin-4;
+
+    &__wrapper{
+
+        display: flex;
+        flex-direction: column;
+
+        &--title{
+            height: 50px;
+            text-align: left;
+            padding-left:20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          
+            -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            -moz-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            -o-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            transition: all 1s cubic-bezier(0, 0, 0, 1);
+            p{
+                font-size: 24px;
+                color: grey;
+            }
+        }
+        &--img{
+            -webkit-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            -moz-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            -o-transition: all 1s cubic-bezier(0, 0, 0, 1);
+            transition: all 1s cubic-bezier(0, 0, 0, 1);
+            img{
+                width: 350px;
+                height: auto;
+            }
+        }
+    }
+   
+    &:hover{
+        
+        .portfolio-card__wrapper{
+            &--img{
+                transform: scale(1.02);
+            }
+            &--title{
+                background-color: $color-1;
+                transform: scale(1.02);
+                p{
+                    color: $color-2;
+                }
+            }
+        }
+    }
+    
+}
+
+@include SmallDevice{
+    .portfolio-card{
+        &__wrapper{
+
+            display: flex;
+            flex-direction: column;
+    
+            &--title{
+    
+            }
+            &--img{
+                img{
+                    width: 360px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@include LargeDevice{
+    .portfolio-card{
+        &__wrapper{
+
+            display: flex;
+            flex-direction: column;
+    
+            &--title{
+    
+            }
+            &--img{
+                img{
+                    width: 350px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
